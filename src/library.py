@@ -330,7 +330,7 @@ if __name__ == '__main__':
     lib = Library()
 
     try:
-        with open("data.json", "r", encoding="utf-8") as f:
+        with open("src/data/data.json", "r", encoding="utf-8") as f:
             data = json.load(f)
         lib.load_data(data)
     except FileNotFoundError:
@@ -338,4 +338,4 @@ if __name__ == '__main__':
 
     ###
 
-    lib.save_to_file('data.json')
+    lib.save_to_file('src/data/data.json')
