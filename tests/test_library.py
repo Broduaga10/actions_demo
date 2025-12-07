@@ -32,9 +32,9 @@ class TestUser(unittest.TestCase):
 
         user.borrow(book)
         self.assertIn("Война и мир", user.show_books())
-        
+
         user.return_book(book)
-        self.assertIsNone(user.show_books())
+        self.assertEqual(user.show_books(), [])
 
 
 class TestLibrary(unittest.TestCase):
